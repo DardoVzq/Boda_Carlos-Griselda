@@ -106,14 +106,26 @@ body{
    TODO EL CONTENIDO SOBRE EL FONDO
 ===================================================== */
 
+css
 body > *:not(.fondo-fijo){
-
     position:relative;
-
     z-index:1;
 }
 
 
+/* El botón de música debe permanecer fijo */
+.boton-musica{
+
+    position:fixed !important;
+
+    bottom:22px !important;
+    right:22px !important;
+
+    top:auto !important;
+    left:auto !important;
+
+    z-index:9999 !important;
+}
 /* =====================================================
    CONTENEDOR GENERAL
 ===================================================== */
