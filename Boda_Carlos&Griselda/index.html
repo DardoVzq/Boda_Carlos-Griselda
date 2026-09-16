@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carlos & Griselda | Nuestra Boda</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --marfil:#f7f3e9;
+    --blanco:#fffdf8;
+
+    --verde:#3f5045;
+    --verde-suave:#687867;
+    --verde-claro:#899786;
+
+    --dorado:#b28b50;
+    --dorado-claro:#d0b47d;
+
+    --texto:#35443b;
+    --gris:#687069;
+
+    /* Intensidad del velo sobre el fondo */
+    --opacidad-fondo:.60;
+}
+
+
+/* =====================================================
+   CUERPO Y FONDO GENERAL
+===================================================== */
+
+body{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--texto);
+
+    overflow-x:hidden;
+
+    /* MISMO FONDO PARA TODA LA PÁGINA */
+    background-image:
+        linear-gradient(
+            rgba(247,243,233,var(--opacidad-fondo)),
+            rgba(247,243,233,var(--opacidad-fondo))
+        ),
+        url("Fondo floral.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+}
+
+
+/* =====================================================
+   CONTENEDOR GENERAL
+===================================================== */
+
+.contenedor{
+
+    width:92%;
+
+    max-width:1200px;
+
+    margin:auto;
+}
+
+
+/* =====================================================
+   DECORACIÓN FLORAL
+===================================================== */
+
+.decoracion{
+
+    position:absolute;
+
+    color:var(--verde-claro);
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+.flor-superior{
+
+    top:20px;
+    left:25px;
+
+    font-size:65px;
+
+    transform:rotate(-20deg);
+
+    opacity:.55;
+}
+
+.flor-superior-derecha{
+
+    top:25px;
+    right:30px;
+
+    font-size:60px;
+
+    transform:rotate(25deg);
+
+    opacity:.45;
+}
+
+.flor-inferior{
+
+    bottom:10px;
+    left:15px;
+
+    font-size:55px;
+
+    opacity:.45;
+
+    transform:rotate(15deg);
+}
+
+.flor-inferior-derecha{
+
+    bottom:10px;
+    right:20px;
+
+    font-size:60px;
+
+    opacity:.45;
+
+    transform:rotate(-20deg);
+}
+
+
+/* =====================================================
+   PORTADA
+===================================================== */
+
+.portada{
+
+    min-height:100vh;
+
+    /* IMPORTANTE:
+       Ya no tiene un fondo propio */
+    background:transparent;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    overflow:hidden;
+}
+
+
+/* =====================================================
+   LÍNEAS DECORATIVAS
+===================================================== */
+
+.linea-dorada{
+
+    width:110px;
+
+    height:1px;
+
+    background:var(--dorado);
+
+    display:inline-block;
+
+    vertical-align:middle;
+
+    margin:0 15px;
+}
+
+
+/* =====================================================
+   CORAZONES
+===================================================== */
+
+.corazones{
+
+    position:absolute;
+
+    top:45px;
+
+    right:7%;
+
+    color:var(--dorado);
+
+    font-size:2rem;
+
+    letter-spacing:-12px;
+
+    transform:rotate(-8deg);
+}
+
+
+.portada-contenido{
+
+    max-width:900px;
+
+    position:relative;
+
+    z-index:5;
+}
+
+
+/* =====================================================
+   TEXTO PORTADA
+===================================================== */
+
+.pre-titulo{
+
+    font-family:'Cinzel',serif;
+
+    font-size:0.9rem;
+
+    letter-spacing:7px;
+
+    color:var(--verde);
+
+    margin-bottom:20px;
+}
+
+
+.nombres{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--verde);
+
+    text-transform:uppercase;
+
+    line-height:1.05;
+
+    letter-spacing:4px;
+}
+
+
+.nombre-principal{
+
+    font-size:3.5rem;
+
+    font-weight:400;
+}
+
+
+.apellidos{
+
+    font-size:1.25rem;
+
+    letter-spacing:7px;
+
+    margin-top:8px;
+
+    margin-bottom:12px;
+}
+
+
+.ampersand{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:4.5rem;
+
+    color:var(--dorado);
+
+    line-height:1;
+
+    margin:5px 0;
+}
+
+
+.frase-portada{
+
+    max-width:600px;
+
+    margin:30px auto;
+
+    font-size:1.15rem;
+
+    font-style:italic;
+
+    line-height:1.8;
+
+    color:var(--gris);
+}
+
+
+/* =====================================================
+   FECHA
+===================================================== */
+
+.fecha{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--verde);
+
+    font-size:2.5rem;
+
+    letter-spacing:5px;
+
+    margin:25px 0;
+}
+
+
+.fecha-subtitulo{
+
+    font-family:'Cinzel',serif;
+
+    font-size:.8rem;
+
+    letter-spacing:5px;
+
+    color:var(--dorado);
+
+    margin-bottom:10px;
+}
+
+
+/* =====================================================
+   CONTADOR
+===================================================== */
+
+.contador{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+
+    margin:35px auto;
+}
+
+
+.caja-contador{
+
+    width:105px;
+
+    padding:16px 10px;
+
+    background:rgba(255,253,248,.88);
+
+    border:1px solid #d2d2c6;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 20px rgba(50,60,50,.08);
+}
+
+
+.numero{
+
+    font-family:'Cinzel',serif;
+
+    font-size:2rem;
+
+    color:var(--verde);
+}
+
+
+.texto-contador{
+
+    font-size:.7rem;
+
+    letter-spacing:2px;
+
+    color:var(--verde-suave);
+
+    margin-top:5px;
+}
+
+
+/* =====================================================
+   FRASE INFERIOR
+===================================================== */
+
+.frase-final{
+
+    max-width:650px;
+
+    margin:25px auto 0;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    font-style:italic;
+
+    color:var(--gris);
+}
+
+
+/* =====================================================
+   SECCIONES
+===================================================== */
+
+.seccion{
+
+    position:relative;
+
+    padding:70px 0;
+
+    /* Todas las secciones dejan ver el fondo general */
+    background:transparent;
+}
+
+
+/* =====================================================
+   SECCIONES TRANSPARENTES
+===================================================== */
+
+.seccion-blanca,
+.seccion-marfil{
+
+    background:transparent;
+}
+
+
+/* =====================================================
+   ENCABEZADOS
+===================================================== */
+
+.encabezado{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+
+.mini-titulo{
+
+    font-family:'Cinzel',serif;
+
+    font-size:.8rem;
+
+    letter-spacing:5px;
+
+    color:var(--dorado);
+
+    margin-bottom:12px;
+}
+
+
+.titulo{
+
+    font-family:'Cinzel',serif;
+
+    font-size:2.2rem;
+
+    font-weight:400;
+
+    letter-spacing:3px;
+
+    color:var(--verde);
+}
+
+
+.decorador{
+
+    margin-top:12px;
+
+    color:var(--dorado);
+
+    font-size:1.2rem;
+
+    letter-spacing:7px;
+}
+
+
+/* =====================================================
+   TARJETA FECHA
+===================================================== */
+
+.fecha-card{
+
+    background:rgba(255,253,248,.92);
+
+    border:1px solid #e0dccf;
+
+    box-shadow:0 8px 30px rgba(70,75,65,.12);
+
+    padding:50px 30px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+.fecha-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:5px;
+    height:100%;
+
+    background:var(--dorado);
+}
+
+
+.fecha-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    right:0;
+
+    width:5px;
+    height:100%;
+
+    background:var(--verde-claro);
+}
+
+
+.fecha-card .fecha{
+
+    font-size:3.5rem;
+
+    margin:15px 0;
+}
+
+
+.fecha-descripcion{
+
+    font-style:italic;
+
+    color:var(--gris);
+
+    font-size:1rem;
+
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   CEREMONIA Y RECEPCIÓN
+===================================================== */
+
+.eventos{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+}
+
+
+.evento-card{
+
+    background:rgba(255,253,248,.93);
+
+    border:1px solid #e2ded3;
+
+    box-shadow:0 8px 30px rgba(70,75,65,.12);
+
+    overflow:hidden;
+
+    border-radius:8px;
+}
+
+
+.evento-imagen{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+
+.evento-contenido{
+
+    padding:30px;
+
+    text-align:center;
+}
+
+
+.evento-titulo{
+
+    font-family:'Cinzel',serif;
+
+    font-size:1.35rem;
+
+    letter-spacing:2px;
+
+    color:var(--verde);
+
+    margin-bottom:15px;
+}
+
+
+.evento-linea{
+
+    width:90px;
+
+    height:1px;
+
+    background:var(--dorado);
+
+    margin:0 auto 20px;
+}
+
+
+.dato{
+
+    font-size:1rem;
+
+    margin:10px 0;
+
+    color:var(--gris);
+}
+
+
+.icono{
+
+    color:var(--verde-suave);
+
+    margin-right:5px;
+}
+
+
+/* =====================================================
+   BOTÓN
+===================================================== */
+
+.boton{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:12px 28px;
+
+    background:var(--verde-suave);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:.9rem;
+
+    transition:.3s;
+
+    box-shadow:0 5px 15px rgba(60,75,60,.15);
+}
+
+
+.boton:hover{
+
+    background:var(--verde);
+
+    transform:translateY(-2px);
+}
+
+
+/* =====================================================
+   VESTIMENTA
+===================================================== */
+
+.vestimenta{
+
+    display:grid;
+
+    grid-template-columns:1fr 1.2fr;
+
+    background:rgba(255,253,248,.93);
+
+    border:1px solid #e0ddd2;
+
+    box-shadow:0 8px 30px rgba(70,75,65,.12);
+
+    overflow:hidden;
+}
+
+
+.vestimenta-imagen{
+
+    width:100%;
+
+    height:100%;
+
+    min-height:330px;
+
+    object-fit:cover;
+}
+
+
+.vestimenta-contenido{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:45px;
+}
+
+
+.vestimenta-titulo{
+
+    font-family:'Cinzel',serif;
+
+    font-size:2rem;
+
+    letter-spacing:3px;
+
+    color:var(--verde);
+
+    margin-bottom:20px;
+}
+
+
+.tipo-vestimenta{
+
+    font-size:1.3rem;
+
+    color:var(--verde);
+
+    margin:10px 0 20px;
+}
+
+
+.nota{
+
+    max-width:550px;
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+    font-style:italic;
+
+    color:var(--gris);
+}
+
+
+/* =====================================================
+   CONFIRMACIÓN
+===================================================== */
+
+.confirmacion{
+
+    background:rgba(255,253,248,.93);
+
+    border:1px solid #e0ddd2;
+
+    box-shadow:0 8px 30px rgba(70,75,65,.12);
+
+    padding:55px 35px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+.confirmacion::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+        to right,
+        var(--verde-claro),
+        var(--dorado),
+        var(--verde-claro)
+    );
+}
+
+
+.confirmacion p{
+
+    max-width:550px;
+
+    margin:15px auto;
+
+    line-height:1.8;
+
+    color:var(--gris);
+}
+
+
+/* =====================================================
+   MÚSICA
+===================================================== */
+
+.boton-musica{
+
+    position:fixed;
+
+    bottom:22px;
+
+    right:22px;
+
+    z-index:999;
+
+    border:1px solid var(--dorado);
+
+    background:var(--blanco);
+
+    color:var(--verde);
+
+    padding:11px 18px;
+
+    border-radius:30px;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:.85rem;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 20px rgba(50,60,50,.12);
+
+    transition:.3s;
+}
+
+
+.boton-musica:hover{
+
+    background:var(--verde);
+
+    color:white;
+}
+
+
+/* =====================================================
+   ANIMACIONES
+===================================================== */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:all .9s ease;
+}
+
+
+.fade.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:850px){
+
+    .eventos{
+
+        grid-template-columns:1fr;
+    }
+
+
+    .vestimenta{
+
+        grid-template-columns:1fr;
+    }
+
+
+    .vestimenta-imagen{
+
+        min-height:280px;
+
+        height:280px;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .portada{
+
+        padding:50px 18px;
+    }
+
+
+    .pre-titulo{
+
+        font-size:.7rem;
+
+        letter-spacing:4px;
+    }
+
+
+    .nombre-principal{
+
+        font-size:2.25rem;
+
+        letter-spacing:2px;
+    }
+
+
+    .apellidos{
+
+        font-size:.9rem;
+
+        letter-spacing:4px;
+    }
+
+
+    .ampersand{
+
+        font-size:3.5rem;
+    }
+
+
+    .fecha{
+
+        font-size:1.7rem;
+
+        letter-spacing:3px;
+    }
+
+
+    .frase-portada{
+
+        font-size:1rem;
+    }
+
+
+    .contador{
+
+        gap:7px;
+    }
+
+
+    .caja-contador{
+
+        width:74px;
+
+        padding:12px 5px;
+    }
+
+
+    .numero{
+
+        font-size:1.35rem;
+    }
+
+
+    .texto-contador{
+
+        font-size:.58rem;
+
+        letter-spacing:1px;
+    }
+
+
+    .titulo{
+
+        font-size:1.7rem;
+    }
+
+
+    .fecha-card{
+
+        padding:40px 20px;
+    }
+
+
+    .fecha-card .fecha{
+
+        font-size:2.3rem;
+    }
+
+
+    .evento-imagen{
+
+        height:220px;
+    }
+
+
+    .evento-contenido{
+
+        padding:25px 18px;
+    }
+
+
+    .vestimenta-contenido{
+
+        padding:35px 20px;
+    }
+
+
+    .vestimenta-titulo{
+
+        font-size:1.6rem;
+    }
+
+
+    .corazones{
+
+        font-size:1.5rem;
+
+        right:30px;
+    }
+
+
+    .flor-superior{
+
+        font-size:45px;
+    }
+
+
+    .flor-superior-derecha{
+
+        font-size:45px;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCCIÓN DE MOVIMIENTO
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        scroll-behavior:auto !important;
+
+        transition:none !important;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     AUDIO
+===================================================== -->
+
+<audio id="musica" loop>
+
+    <source src="Morat - Mi Vida Entera.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<!-- BOTÓN DE MÚSICA -->
+
+<button
+    id="botonMusica"
+    class="boton-musica">
+
+    ♫ Nuestra canción
+
+</button>
+
+
+
+<!-- =====================================================
+     PORTADA
+===================================================== -->
+
+<section class="portada">
+
+
+    <div class="decoracion flor-superior">
+        ❀
+    </div>
+
+    <div class="decoracion flor-superior-derecha">
+        ❧
+    </div>
+
+    <div class="decoracion flor-inferior">
+        ❦
+    </div>
+
+    <div class="decoracion flor-inferior-derecha">
+        ❀
+    </div>
+
+
+    <div class="corazones">
+        ♡♡
+    </div>
+
+
+    <div class="portada-contenido fade">
+
+
+        <div class="pre-titulo">
+            NUESTRA BODA
+        </div>
+
+
+        <div class="nombres">
+
+            <div class="nombre-principal">
+                CARLOS ÁRTURO
+            </div>
+
+            <div class="apellidos">
+                MOSCOSO GÓMEZ
+            </div>
+
+        </div>
+
+
+        <div class="ampersand">
+            &
+        </div>
+
+
+        <div class="nombres">
+
+            <div class="nombre-principal">
+                GRISELDA CANELA
+            </div>
+
+            <div class="apellidos">
+                RAMOS
+            </div>
+
+        </div>
+
+
+        <div class="frase-portada">
+
+            Dos caminos, un mismo destino...<br>
+
+            y una hermosa razón para celebrar.
+
+        </div>
+
+
+        <div class="fecha-subtitulo">
+            RESERVA LA FECHA
+        </div>
+
+
+        <div class="fecha">
+            27 · 12 · 2026
+        </div>
+
+
+        <div class="contador">
+
+
+            <div class="caja-contador">
+
+                <div
+                    class="numero"
+                    id="dias">
+
+                    00
+
+                </div>
+
+                <div class="texto-contador">
+                    DÍAS
+                </div>
+
+            </div>
+
+
+            <div class="caja-contador">
+
+                <div
+                    class="numero"
+                    id="horas">
+
+                    00
+
+                </div>
+
+                <div class="texto-contador">
+                    HORAS
+                </div>
+
+            </div>
+
+
+            <div class="caja-contador">
+
+                <div
+                    class="numero"
+                    id="minutos">
+
+                    00
+
+                </div>
+
+                <div class="texto-contador">
+                    MIN
+                </div>
+
+            </div>
+
+
+            <div class="caja-contador">
+
+                <div
+                    class="numero"
+                    id="segundos">
+
+                    00
+
+                </div>
+
+                <div class="texto-contador">
+                    SEG
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <p class="frase-final">
+
+            Hay momentos que cambian nuestra historia,
+            y este es uno de ellos.
+
+            <br>
+
+            Queremos celebrar el comienzo de esta nueva etapa
+            junto a las personas que han sido parte de nuestro camino.
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FECHA
+===================================================== -->
+
+<section class="seccion seccion-blanca">
+
+
+<div class="contenedor">
+
+
+    <div class="encabezado fade">
+
+        <div class="mini-titulo">
+            UNA FECHA ESPECIAL
+        </div>
+
+        <div class="titulo">
+            Para un amor eterno
+        </div>
+
+        <div class="decorador">
+            ─── ❦ ───
+        </div>
+
+    </div>
+
+
+    <div class="fecha-card fade">
+
+
+        <div class="mini-titulo">
+            RESERVA LA FECHA
+        </div>
+
+
+        <div class="fecha">
+            27 · 12 · 2026
+        </div>
+
+
+        <p class="fecha-descripcion">
+
+            Una fecha especial para celebrar
+            el comienzo de una nueva historia.
+
+        </p>
+
+
+        <div class="decorador">
+            ♡
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CEREMONIA Y RECEPCIÓN
+===================================================== -->
+
+<section class="seccion seccion-marfil">
+
+
+<div class="contenedor">
+
+
+    <div class="encabezado fade">
+
+        <div class="mini-titulo">
+            COMPARTAMOS ESTE MOMENTO
+        </div>
+
+        <div class="titulo">
+            Los esperamos
+        </div>
+
+        <div class="decorador">
+            ─── ❦ ───
+        </div>
+
+    </div>
+
+
+
+    <div class="eventos">
+
+
+        <div class="evento-card fade">
+
+
+            <img
+                src="capilla.jpeg"
+                class="evento-imagen"
+                alt="Ceremonia religiosa">
+
+
+            <div class="evento-contenido">
+
+
+                <div class="evento-titulo">
+                    CEREMONIA RELIGIOSA
+                </div>
+
+
+                <div class="evento-linea"></div>
+
+
+                <p class="dato">
+
+                    <span class="icono">◷</span>
+
+                    Hora: 03:00 PM
+
+                </p>
+
+
+                <p class="dato">
+
+                    <span class="icono">⌖</span>
+
+                    Lugar: Capilla del salón
+
+                </p>
+
+
+                <a
+                    class="boton"
+                    href="https://maps.app.goo.gl/mBkUAPsaVKRnHpBv9"
+                    target="_blank">
+
+                    Ver ubicación
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="evento-card fade">
+
+
+            <img
+                src="recepcion.jpeg"
+                class="evento-imagen"
+                alt="Recepción">
+
+
+            <div class="evento-contenido">
+
+
+                <div class="evento-titulo">
+                    RECEPCIÓN
+                </div>
+
+
+                <div class="evento-linea"></div>
+
+
+                <p class="dato">
+
+                    <span class="icono">◷</span>
+
+                    Hora: 04:00 PM
+
+                </p>
+
+
+                <p class="dato">
+
+                    <span class="icono">⌖</span>
+
+                    Lugar: Herencia Salón de Eventos
+
+                </p>
+
+
+                <a
+                    class="boton"
+                    href="https://maps.app.goo.gl/mBkUAPsaVKRnHpBv9"
+                    target="_blank">
+
+                    Ver ubicación
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CÓDIGO DE VESTIMENTA
+===================================================== -->
+
+<section class="seccion seccion-blanca">
+
+
+<div class="contenedor">
+
+
+    <div class="vestimenta fade">
+
+
+        <img
+            src="Codigo de vestimenta.jpg"
+            class="vestimenta-imagen"
+            alt="Código de vestimenta">
+
+
+        <div class="vestimenta-contenido">
+
+
+            <div class="mini-titulo">
+                PARA NUESTRO DÍA
+            </div>
+
+
+            <div class="vestimenta-titulo">
+                CÓDIGO DE VESTIMENTA
+            </div>
+
+
+            <div class="decorador">
+                ─── ❦ ───
+            </div>
+
+
+            <div class="tipo-vestimenta">
+                Casual / Formal
+            </div>
+
+
+            <p class="nota">
+
+                Les pedimos cordialmente no vestir de blanco, marfil ni dorado, tonos reservados para la pareja.
+
+                <br><br>
+
+                No tenis para hombres y mujeres.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONFIRMACIÓN
+===================================================== -->
+
+<section class="seccion seccion-marfil">
+
+
+<div class="contenedor">
+
+
+    <div class="confirmacion fade">
+
+
+        <div class="mini-titulo">
+            NOS ENCANTARÍA CONTAR CONTIGO
+        </div>
+
+
+        <div class="titulo">
+            Confirma tu Asistencia
+        </div>
+
+
+        <div class="decorador">
+            ─── ♡ ───
+        </div>
+
+
+        <p>
+
+            Tu presencia hará aún más especial
+            uno de los días más importantes de nuestra vida.
+
+        </p>
+
+
+        <a
+            class="boton"
+            href="https://wa.me/529212474795?text=Hola%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Carlos%20y%20Griselda"
+            target="_blank">
+
+            ♡ &nbsp; Confirmar por WhatsApp
+
+        </a>
+
+
+        <div class="decorador">
+            ❦
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   CONTADOR
+===================================================== */
+
+const fechaEvento =
+new Date("December 27, 2026 00:00:00").getTime();
+
+
+function actualizarContador(){
+
+    const ahora =
+    new Date().getTime();
+
+
+    const diferencia =
+    fechaEvento - ahora;
+
+
+    if(diferencia <= 0){
+
+        document.getElementById("dias").innerHTML = "00";
+
+        document.getElementById("horas").innerHTML = "00";
+
+        document.getElementById("minutos").innerHTML = "00";
+
+        document.getElementById("segundos").innerHTML = "00";
+
+        return;
+    }
+
+
+    const dias =
+    Math.floor(
+        diferencia /
+        (1000 * 60 * 60 * 24)
+    );
+
+
+    const horas =
+    Math.floor(
+        (diferencia %
+        (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+
+    const minutos =
+    Math.floor(
+        (diferencia %
+        (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+
+    const segundos =
+    Math.floor(
+        (diferencia %
+        (1000 * 60)) /
+        1000
+    );
+
+
+    document.getElementById("dias").innerHTML =
+    String(dias).padStart(2,"0");
+
+
+    document.getElementById("horas").innerHTML =
+    String(horas).padStart(2,"0");
+
+
+    document.getElementById("minutos").innerHTML =
+    String(minutos).padStart(2,"0");
+
+
+    document.getElementById("segundos").innerHTML =
+    String(segundos).padStart(2,"0");
+
+}
+
+
+actualizarContador();
+
+
+setInterval(
+    actualizarContador,
+    1000
+);
+
+
+/* =====================================================
+   MÚSICA
+===================================================== */
+
+const musica =
+document.getElementById("musica");
+
+
+const botonMusica =
+document.getElementById("botonMusica");
+
+
+let reproduciendo = false;
+
+
+botonMusica.addEventListener(
+    "click",
+    async function(){
+
+        if(!reproduciendo){
+
+            try{
+
+                await musica.play();
+
+                reproduciendo = true;
+
+                botonMusica.innerHTML =
+                "❚❚ Música";
+
+            }
+
+            catch(error){
+
+                console.log(
+                    "No se pudo reproducir la música.",
+                    error
+                );
+
+            }
+
+        }
+
+        else{
+
+            musica.pause();
+
+            reproduciendo = false;
+
+            botonMusica.innerHTML =
+            "♫ Nuestra canción";
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   ANIMACIÓN AL HACER SCROLL
+===================================================== */
+
+const elementos =
+document.querySelectorAll(".fade");
+
+
+const opciones = {
+
+    threshold:0.15
+
+};
+
+
+const observer =
+new IntersectionObserver(
+
+    function(entries, observer){
+
+        entries.forEach(entry => {
+
+            if(!entry.isIntersecting){
+
+                return;
+
+            }
+
+
+            entry.target.classList.add(
+                "visible"
+            );
+
+
+            observer.unobserve(
+                entry.target
+            );
+
+        });
+
+    },
+
+    opciones
+
+);
+
+
+elementos.forEach(elemento => {
+
+    observer.observe(elemento);
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
