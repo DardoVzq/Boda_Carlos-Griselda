@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -44,9 +45,42 @@
 
 
 /* =====================================================
-   CUERPO Y FONDO GENERAL
+   CUERPO
 ===================================================== */
-body {
+
+html,
+body{
+    min-height:100%;
+}
+
+body{
+
+    margin:0;
+
+    background-color:var(--marfil);
+
+    position:relative;
+
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   FONDO FLORAL
+===================================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-10;
+
+    pointer-events:none;
+
     background-image:
         linear-gradient(
             rgba(247,243,233,var(--opacidad-fondo)),
@@ -54,26 +88,17 @@ body {
         ),
         url("Fondo floral.jpg");
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+    background-repeat:no-repeat;
+
+    background-position:center center;
+
+    /*
+       PC:
+       La imagen ocupa todo el ancho
+       manteniendo su proporción.
+    */
+    background-size:100% auto;
 }
-
-/* ================================
-   AJUSTES PARA CELULAR
-   ================================ */
-
-@media (max-width: 768px) {
-
-    body {
-        background-size: auto 100vh;
-        background-position: center top;
-        background-attachment: scroll;
-    }
-
-}
-
 
 
 /* =====================================================
@@ -162,8 +187,6 @@ body {
 
     min-height:100vh;
 
-    /* IMPORTANTE:
-       Ya no tiene un fondo propio */
     background:transparent;
 
     position:relative;
@@ -434,14 +457,9 @@ body {
 
     padding:70px 0;
 
-    /* Todas las secciones dejan ver el fondo general */
     background:transparent;
 }
 
-
-/* =====================================================
-   SECCIONES TRANSPARENTES
-===================================================== */
 
 .seccion-blanca,
 .seccion-marfil{
@@ -942,7 +960,26 @@ body {
 }
 
 
+/* =====================================================
+   CELULAR
+===================================================== */
+
 @media(max-width:600px){
+
+    /*
+       En celular hacemos que la imagen
+       se adapte al ANCHO del teléfono.
+
+       Esto evita el zoom exagerado de cover.
+    */
+
+    body::before{
+
+        background-size:100% auto;
+
+        background-position:center top;
+    }
+
 
     .portada{
 
@@ -1120,8 +1157,6 @@ body {
 </audio>
 
 
-<!-- BOTÓN DE MÚSICA -->
-
 <button
     id="botonMusica"
     class="boton-musica">
@@ -1131,13 +1166,11 @@ body {
 </button>
 
 
-
 <!-- =====================================================
      PORTADA
 ===================================================== -->
 
 <section class="portada">
-
 
     <div class="decoracion flor-superior">
         ❀
@@ -1155,14 +1188,12 @@ body {
         ❀
     </div>
 
-
     <div class="corazones">
         ♡♡
     </div>
 
 
     <div class="portada-contenido fade">
-
 
         <div class="pre-titulo">
             NUESTRA BODA
@@ -1221,15 +1252,10 @@ body {
 
         <div class="contador">
 
-
             <div class="caja-contador">
 
-                <div
-                    class="numero"
-                    id="dias">
-
+                <div class="numero" id="dias">
                     00
-
                 </div>
 
                 <div class="texto-contador">
@@ -1241,12 +1267,8 @@ body {
 
             <div class="caja-contador">
 
-                <div
-                    class="numero"
-                    id="horas">
-
+                <div class="numero" id="horas">
                     00
-
                 </div>
 
                 <div class="texto-contador">
@@ -1258,12 +1280,8 @@ body {
 
             <div class="caja-contador">
 
-                <div
-                    class="numero"
-                    id="minutos">
-
+                <div class="numero" id="minutos">
                     00
-
                 </div>
 
                 <div class="texto-contador">
@@ -1275,12 +1293,8 @@ body {
 
             <div class="caja-contador">
 
-                <div
-                    class="numero"
-                    id="segundos">
-
+                <div class="numero" id="segundos">
                     00
-
                 </div>
 
                 <div class="texto-contador">
@@ -1288,7 +1302,6 @@ body {
                 </div>
 
             </div>
-
 
         </div>
 
@@ -1305,7 +1318,6 @@ body {
 
         </p>
 
-
     </div>
 
 </section>
@@ -1318,9 +1330,7 @@ body {
 
 <section class="seccion seccion-blanca">
 
-
 <div class="contenedor">
-
 
     <div class="encabezado fade">
 
@@ -1341,16 +1351,13 @@ body {
 
     <div class="fecha-card fade">
 
-
         <div class="mini-titulo">
             RESERVA LA FECHA
         </div>
 
-
         <div class="fecha">
             27 · 12 · 2026
         </div>
-
 
         <p class="fecha-descripcion">
 
@@ -1359,11 +1366,9 @@ body {
 
         </p>
 
-
         <div class="decorador">
             ♡
         </div>
-
 
     </div>
 
@@ -1379,9 +1384,7 @@ body {
 
 <section class="seccion seccion-marfil">
 
-
 <div class="contenedor">
-
 
     <div class="encabezado fade">
 
@@ -1400,12 +1403,10 @@ body {
     </div>
 
 
-
     <div class="eventos">
 
 
         <div class="evento-card fade">
-
 
             <img
                 src="capilla.jpeg"
@@ -1415,11 +1416,9 @@ body {
 
             <div class="evento-contenido">
 
-
                 <div class="evento-titulo">
                     CEREMONIA RELIGIOSA
                 </div>
-
 
                 <div class="evento-linea"></div>
 
@@ -1451,7 +1450,6 @@ body {
 
                 </a>
 
-
             </div>
 
         </div>
@@ -1459,7 +1457,6 @@ body {
 
 
         <div class="evento-card fade">
-
 
             <img
                 src="recepcion.jpeg"
@@ -1469,11 +1466,9 @@ body {
 
             <div class="evento-contenido">
 
-
                 <div class="evento-titulo">
                     RECEPCIÓN
                 </div>
-
 
                 <div class="evento-linea"></div>
 
@@ -1505,7 +1500,6 @@ body {
 
                 </a>
 
-
             </div>
 
         </div>
@@ -1525,9 +1519,7 @@ body {
 
 <section class="seccion seccion-blanca">
 
-
 <div class="contenedor">
-
 
     <div class="vestimenta fade">
 
@@ -1563,7 +1555,8 @@ body {
 
             <p class="nota">
 
-                Les pedimos cordialmente no vestir de blanco, marfil ni dorado, tonos reservados para la pareja.
+                Les pedimos cordialmente no vestir de blanco,
+                marfil ni dorado, tonos reservados para la pareja.
 
                 <br><br>
 
@@ -1573,7 +1566,6 @@ body {
 
 
         </div>
-
 
     </div>
 
@@ -1589,9 +1581,7 @@ body {
 
 <section class="seccion seccion-marfil">
 
-
 <div class="contenedor">
-
 
     <div class="confirmacion fade">
 
@@ -1857,3 +1847,4 @@ elementos.forEach(elemento => {
 </body>
 
 </html>
+```
