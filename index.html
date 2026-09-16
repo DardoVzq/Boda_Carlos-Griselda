@@ -46,16 +46,7 @@
 /* =====================================================
    CUERPO Y FONDO GENERAL
 ===================================================== */
-
-body{
-
-    font-family:'Playfair Display',serif;
-
-    color:var(--texto);
-
-    overflow-x:hidden;
-
-    /* MISMO FONDO PARA TODA LA PÁGINA */
+body {
     background-image:
         linear-gradient(
             rgba(247,243,233,var(--opacidad-fondo)),
@@ -63,14 +54,26 @@ body{
         ),
         url("Fondo floral.jpg");
 
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
+
+/* ================================
+   AJUSTES PARA CELULAR
+   ================================ */
+
+@media (max-width: 768px) {
+
+    body {
+        background-size: auto 100vh;
+        background-position: center top;
+        background-attachment: scroll;
+    }
+
+}
+
 
 
 /* =====================================================
